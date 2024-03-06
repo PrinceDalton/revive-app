@@ -13,11 +13,11 @@ spec:
       - helm-charts/helm-chart-1/carts/
       - helm-charts/helm-chart-1/carts-db/
     targetRevision: main
-    #directory:
-     # recurse: true
-    helm:
-      valueFiles:
-        - values.yaml
+    directory:
+      recurse: true
+    #helm:
+     # valueFiles:
+      #  - values.yaml
   project: default
   syncPolicy:
     syncOptions:
