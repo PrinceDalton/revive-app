@@ -11,11 +11,11 @@ spec:
     repoURL: 'https://github.com/PrinceDalton/revive-app.git'
     path: helm-charts/helm-chart-2/carts
     targetRevision: main
-    directory:
-      recurse: true
-   # helm:
-    #  valueFiles:
-     #   - values.yaml
+    #directory:
+     # recurse: true
+    helm:
+      valueFiles:
+        - values.yaml
   project: default
   syncPolicy:
     syncOptions:
