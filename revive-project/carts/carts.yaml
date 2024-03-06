@@ -2,11 +2,11 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: carts
-  namespace: argocd
+  namespace: revive
 spec:
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: argocd
+    namespace: revive
   source:
     repoURL: 'https://github.com/PrinceDalton/revive-app.git'
     path: helm-charts/helm-chart-2/carts
@@ -24,3 +24,5 @@ spec:
     automated:
       prune: true
       selfHeal: true
+    prerequisites:
+    - createNamespace: true
