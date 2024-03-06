@@ -2,15 +2,18 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: carts
-  namespace: revive
+  namespace: argocd
 spec:
   destination:
+    name: in-cluster
     server: 'https://kubernetes.default.svc'
-    namespace: default
+    namespace: argocd
   source:
     repoURL: 'https://github.com/PrinceDalton/revive-app.git'
     path: revive-app/helm-charts/helm-chart-2/carts/
     targetRevision: main
+    directory:
+      recurse: true
   project: default
   syncPolicy:
     syncOptions:
