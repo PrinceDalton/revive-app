@@ -3,3 +3,4 @@ kind: Kustomization
 
 resources:
 - charts/carts.yaml
+- charts/carts-db.yaml
