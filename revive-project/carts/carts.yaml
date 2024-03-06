@@ -9,7 +9,7 @@ spec:
     namespace: argocd
   source:
     repoURL: 'https://github.com/PrinceDalton/revive-app.git'
-    path: revive-app/helm-charts/helm-chart-2/carts/
+    path: helm-charts/helm-chart-2/carts/
     targetRevision: main
     directory:
       recurse: true
