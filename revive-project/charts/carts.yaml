@@ -9,7 +9,9 @@ spec:
     namespace: revive
   source:
     repoURL: 'https://github.com/PrinceDalton/revive-app.git'
-    path: helm-charts/helm-chart-1/carts
+    charts: 
+      - helm-charts/helm-chart-1/carts
+      - helm-charts/helm-chart-1/carts-db
     targetRevision: main
     #directory:
      # recurse: true
@@ -25,4 +27,4 @@ spec:
       prune: true
       selfHeal: true
     prerequisites:
-    - createNamespace: true
+      - createNamespace: true
